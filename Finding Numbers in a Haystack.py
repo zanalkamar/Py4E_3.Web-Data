@@ -51,3 +51,19 @@
 # Please don't waste a lot of time trying to figure out the shortest solution until you have completed the homework. List comprehension is mentioned in Chapter 10 
 # and the read() method is covered in Chapter 7.
 
+import re
+
+filename = "regex_sum_1618182.txt"
+total = 0
+tot = int(total)
+
+fh = open(filename)
+lst = list()
+
+for line in fh:
+    temp = line.rstrip()
+    x = re.findall('[0-9]+', temp)
+    for sum in x:
+        tot = tot + int(sum)
+print(tot)
+    
